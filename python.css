@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Patua+One&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Patua One", serif;
+}
+
+
+/*ESTILOS DE ORGANIGRAMA DESPLEGABLE*/
+a{
+    text-decoration: none;
+    color: black;
+}
+#introduccion{   
+    margin: 0px 10px;
+    background-color: rgba(76, 76, 80, 0.801);
+    text-align: center;
+    padding: 60px;
+    
+}
+#cajaTexto{
+    background: linear-gradient(to right,rgb(226, 150, 44),#ce6f02,#c53902);
+    padding: 70px;
+}
+#seccionDesplegable{
+    border-top: solid 10px #ee7724;
+    background: linear-gradient(to right,rgb(226, 150, 44),#ce6f02,#c53902);
+    margin: 0px;
+    padding: 50px;
+    height: 100%;
+    border-bottom: solid 10px #ee7724;/**/
+
+}
+#organigrama{
+    margin: 10px;
+    padding: 20px;
+}
+.row{
+    display: flex;
+    text-align: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+#fila1S,#fila1I{
+    margin: 0px 40px;
+    cursor: pointer;
+    
+}
+#fila2S,#fila2I{
+    padding: 16px;
+    display: none;/*oculta inicialmente el elemento.*/
+    cursor: pointer;
+}
+#iteracion,#seleccion{
+    border: solid 3px white;
+}
+#doble,#simple,#multiple {
+    margin: 0px 20px;
+    padding: 18px;
+    border: solid 3px #ce6f02;
+}
+#contador,#condicion{
+    margin: 0px 20px;
+    border: solid 3px #ce6f02;
+    
+}
+
+/*ESTILOS DE FOOTER*/

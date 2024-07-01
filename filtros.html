@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Ejemplo de Página Responsiva</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #aa4d0a, #ee7724, #d8363a);
+            background: linear-gradient(to left,rgb(224, 146, 1),#ce6f02,#c53902);
+        }
+        .btn-gradient {
+            background: linear-gradient(to right, #ee7724, #d8363a);
+            background: linear-gradient(to left,rgb(224, 146, 1),#ce6f02,#c53902);
+            border: none;
+            color: white;
+        }
+        h5 {
+            font-weight: bold;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card {
+            margin: 10px;
+        }
+    
+        header {
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <header>
+        <div class="logo-container">
+            <a href="/index.html">
+                <img src="/iconos/logo.png" alt="Logo">
+            </a>
+            <h1>Estructuras de control</h1>
+        </div>
+        <div></div> 
+    </header>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="languageSelect">Lenguaje:</label>
+                <select id="languageSelect" class="form-control">
+                    <option value="">Todos</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="structureSelect">Estructura de Control:</label>
+                <select id="structureSelect" class="form-control">
+                    <option value="">Todas</option>
+                    <option value="if">If</option>
+                    <option value="for">For</option>
+                    <option value="while">While</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <!-- Cards will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        const cardsData = [
+            {
+                id: 1,
+                language: 'java',
+                structure: 'if',
+                title: 'Java If',
+                image: '/iconos/logo_java_gris.png',
+                text: 'Ejemplo de estructura if en Java.',
+                link: 'java_if.html'
+            },
+            {
+                id: 2,
+                language: 'java',
+                structure: 'for',
+                title: 'Java For',
+                image: '/iconos/logo_java_gris.png',
+                text: 'Ejemplo de estructura for en Java.',
+                link: 'java_for.html'
+            },
+            {
+                id: 3,
+                language: 'java',
+                structure: 'while',
+                title: 'Java While',
+                image: '/iconos/logo_java_gris.png',
+                text: 'Ejemplo de estructura while en Java.',
+                link: 'java_while.html'
+            },
+            {
+                id: 4,
+                language: 'python',
+                structure: 'if',
+                title: 'Python If',
+                image: '/iconos/logo_python_gris.png',
+                text: 'Ejemplo de estructura if en Python.',
+                link: 'seleccionP.html#if'
+            },
+            {
+                id: 5,
+                language: 'python',
+                structure: 'for',
+                title: 'Python For',
+                image: '/iconos/logo_python_gris.png',
+                text: 'Ejemplo de estructura for en Python.',
+                link: 'iteracionP.html#for'
+            },
+            {
+                id: 6,
+                language: 'python',
+                structure: 'while',
+                title: 'Python While',
+                image: '/iconos/logo_python_gris.png',
+                text: 'Ejemplo de estructura while en Python.',
+                link: 'iteracionP.html#while'
+            }
+        ];
+
+        function renderCards(cards) {
+            const cardContainer = document.querySelector('.card-container');
+            cardContainer.innerHTML = '';
+            cards.forEach(card => {
+                const cardHtml = `
+                    <div class="card" style="width: 18rem;">
+                        <img src="${card.image}" class="card-img-top" alt="${card.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${card.title}</h5>
+                            <p class="card-text">${card.text}</p>
+                            <a href="${card.link}" class="btn btn-gradient">Comenzar</a>
+                        </div>
+                    </div>
+                `;
+                cardContainer.innerHTML += cardHtml;
+            });
+        }
+
+        function filterCards() {
+            const language = document.getElementById('languageSelect').value;
+            const structure = document.getElementById('structureSelect').value;
+
+            const filteredCards = cardsData.filter(card => {
+                return (language === '' || card.language === language) &&
+                       (structure === '' || card.structure === structure);
+            });
+
+            renderCards(filteredCards);
+        }
+
+        document.getElementById('languageSelect').addEventListener('change', filterCards);
+        document.getElementById('structureSelect').addEventListener('change', filterCards);
+
+        // Initial render
+        renderCards(cardsData);
+    </script>
+</body>
+</html>

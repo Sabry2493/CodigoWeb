@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="indexEstilos.css">
+    <link rel="stylesheet" href="python.css">
+    <title>Estructuras Python</title>
+</head>
+<body>
+    <!--NAV RESPONSIVO-->
+
+    <!--Menu para mi pagina CodigoWeb-->
+    <!--Para que el nav este dentro de una tarjeta uso la clase card-->
+    <div class="card" style="background: linear-gradient(to bottom,rgb(247, 232, 232),rgb(189, 131, 50),#c76c05,#c53902);">
+        <div class="card-body py-2">
+            <!--Navbar-expand-lg:navbar se expandirá en dispositivos grandes (lg).-->
+            <nav class="navbar navbar-expand-lg py-1" id="miNav">
+                <!--En esta seccion agrego el logo-->
+                <a href="/index.html" class="navbar-brand ps-2"><img src="/iconos/logo_Codigoweb.png" alt=""
+                        height="95px" id="logoCodweb"></a>
+                <!--menu hamburguesa: clase navbar-toggler, los atributos data-bs-toggle(al apretar el boton con la clase
+                        navbar-toggler se activa el offcanvas y data-bs-target:cual offcanvas activara id miOffcanvas. 
+                        -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#miOffcanvas"
+                    aria-controls="miOffcanvas">
+                    <!--Para el icono hamburguesa uso la clase navbar-toggler-icon dentro de una span-->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--menu desplegable del lado izquierdo, un div con clases offcanvas(tipo offcanvas) y offcanvas-start(a la izq=start o derec=end)
+                    Dentro del contenedor tengo 2 partes(2divs):header y el body de este menu.
+                -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="miOffcanvas"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a href="/index.html" class="me-2"><img src="/iconos/logoCodigoweb.png" alt="logo" height="90px"
+                                id="logoOffc" width="100%"></a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end  flex-grow-1 pe-3">
+                            <!--Los items de la lista deben usar la clase nav-item-->
+                            <li class="nav-item pe-4">
+                                <!--los enlaces de los items deben usar la clase: nav-link-->
+                                <a class="nav-link" href="/index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown pe-4">
+                                <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Lenguajes</button>
+                                <ul class="dropdown-menu"
+                                    style="background: linear-gradient(to top,rgba(247, 232, 232, 0.527),rgba(189, 131, 50, 0.589),#c76c0598,#c539029d); border: solid 0px;">
+                                    <li><a class="dropdown-item" href="#">Python</a></li>
+                                    <li><a class="dropdown-item" href="#">Java</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item pe-4">
+                                <a class="nav-link" href="#nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item pe-4">
+                                <a class="nav-link" href="#contactenos">Contactanos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <section id="introduccion">
+        <div id="cajaTexto">
+        <h2>Introduccion</h2>
+        <p>Python, es un lenguaje de programación que se caracteriza por su simplicidad y facilidad de aprender. Sus estructuras de control nos permiten manipular la lógica de nuestros programas, facilitándonos la resolución de problemas.</p>
+        <h2 >¿Que son las estructuras de control?</h2>
+        <p>
+            Estas sentencias que veremos nos sirven para comparar dos valores y esa comparacion me va a dar un valor logico: un verdadero o un falso <br>
+            si una determinada condicion se cumple, se va a ejecutar un determinado numero de acciones y sino se cumple puede que se ejecute otro <br>
+            numero de acciones o puede que no se ejecute nada.
+        </p>
+        </div>
+        <p style="font-size: 25px;color: grey;background-color: white;margin-top: 20px;">Las siguientes son las diferentes tipos de estructuras condicionales que se usan en python</p>
+    </section>
+    
+    <section id="seccionDesplegable">
+        <h1 style="text-align: center;">Estructuras de control en Python</h1>
+        <div id="organigrama">
+            <div class="row" id="filaTitulos">
+                <div id="columnaSeleccion" class="col-6">
+                    <div class="row" id="fila1S">
+                        <div id="seleccion" style="background-color: orange;" class="col-12">
+                            <h2>Seleccion</h2>
+                        </div>
+                    </div>
+                    <div class="row" id="fila2S">
+                        <div class="col-3" id="simple" style="background-color: rgb(255, 115, 0);">
+                            <a href="/seleccionP.html#if"><h3>Simple</h3></a>
+                            <p>if</p>
+                        </div>
+                        <div class="col-3" id="doble" style="background-color: rgb(255, 123, 0);">
+                            <a href="/seleccionP.html#ifelse"><h3>Doble</h3></a>
+                            <p>else(if else)</p>
+                        </div>
+                        <div class="col-3" id="multiple" style="background-color: rgb(231, 140, 35);">
+                            <a href="/seleccionP.html#elif"><h3>Multiple</h3></a>
+                            <p>elif(if else if else)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="columnaIteracion" class="col-6">
+                    <div class="row" id="fila1I">
+                        <div id="iteracion" style="background-color: orange;" class="col-12">
+                            <h2>Iteracion</h2>
+                        </div>
+                    </div>
+                    <div class="row" id="fila2I">
+                        <div class="col-5" id="contador" style="background-color: rgb(243, 140, 23);">
+                            <a href="/iteracionP.html#for"><h3>controlados <br> por contador</h3></a>
+                            <p>for</p>
+                        </div> 
+                    <div class="col-5" id="condicion" style="background-color: rgb(255, 145, 0);">
+                            <a href="/iteracionP.html#while"><h3>controlados <br> por condicion</h3></a>
+                            <p>while</p>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>        
+    </section>
+    
+    <!--FOOTER-->
+    <div class="card" >
+        <div class="card-body py-1 pe-1 ps-1" style="background: linear-gradient(to bottom,rgb(247, 232, 232),rgb(189, 131, 50),#c76c05,#c53902);">
+            <footer style="background: linear-gradient(to left,rgb(245, 223, 193),#c76c05,#c53902);border-radius: 2px;">
+
+                <p>Visita nuestras redes</p>
+                <div>
+                    <a href=""><img src="/iconos/face.png" alt="" class="iconos"></a>
+                    <a href=""><img src="/iconos/insta.png" alt="" class="iconos"></a>
+                    <a href=""><img src="/iconos/youtu.png" alt="" class="iconos"></a>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    <script src="/proyecto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

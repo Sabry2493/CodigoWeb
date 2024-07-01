@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="iteracionP.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--CABECERA con logo,nombre y menu-->
+    <header class="row" id="cabecera">
+        <a href="/index.html"class="col-1"><img src="/iconos/logo.png" alt="logo" id="logo"><!--Logo--></a>
+        <h1 class="col-5" id="titulo" style="padding-left: 0px;"> Estructuras de control </h1><!--Titulo-->
+        <!--Menu-->
+        <nav class="col-6" id="navegacion">
+            <ul class="row" >
+                <li class="col-5" id="estructuras" ><a href="/recursosFiltrado.html" >Contenidos</a></li>
+                <li class="col-2"><a href="/index.html#nosotros" >Nosotros</a></li>
+                <li class="col-3"><a href="/index.html#contactenos" >Contactenos</a></li>
+                <label for="toggle" id="modoOscuro" class="col-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                </svg>
+              </label>
+            </ul>  
+        </nav>
+    </header>
+    <section id="seccionIteracion">
+        <div id="fondoTexto">
+        <h2 class="subtitulos">Iteracion</h2>
+        <p>La iteracion en python son los llamados bucles que nos permiten repetir un conjunto de instrucciones varias veces, hasta que se cumpla una condición.</p>
+            <article id="for">
+                <h2 class="subtitulos">Estructura de control FOR</h2>
+                <p>El bucle for nos permite iterar sobre una secuencia de elementos (listas, tuplas, diccionarios)</p>
+                <h4>Su estructura basica es la siguiente</h4>
+                <img src="/iconos/estructuraFor.png" alt="">
+                <h4>Ejemplo de uso</h4>
+                <p>Tomemos un ejemplo, en el que tenemos una lista de numeros, los cuales representan la nota de los alumnos que se presentaron a rendir y los que estuvieron
+                   ausentes(nota= 0) y queremos que nos cuente cuantos alumnos estuvieron ausentes osea cuantos numeros 0 hay en la lista, esta es mi condicicion,
+                   para hacer esto tendriamos que recorrer esa lista e ir comparando numero con numero y cuando encuentre uno que cumpla la CONDICION lo contaremos,
+                   usando un contador, acontinuacion se puede observar la resolucion del ejemplo dado.</p>
+                <img src="/iconos/ejemploFor.png" alt="">
+                <h4>Video de referencia</h4>
+                <iframe src="https://www.youtube.com/watch?v=-kFBwApYVtA&ab_channel=Programaci%C3%B3nATS" frameborder="0"></iframe>
+            </article>
+            <article id="while">
+                <h2 class="subtitulos">Estructura de control WHILE</h2>
+                <p>El bucle while se ejecuta mientras se cumpla una condición.</p>
+                <h4>Su estructura basica es la siguiente</h4>
+                <img src="/iconos/estructuraWhile.png" alt="">
+                <h4>Ejemplo de uso</h4>
+                <p>Tomemos un ejemplo, en el ejercicio anterior ya teniamos las notas escritas en el arreglo, ahora veremos como ir registrando cada nota dentro del mismo MIENTRAS
+                    yo le diga que tengo mas notas por registrar. Acontinuacion se puede observar la resolucion del ejemplo dado.</p>
+                <img src="/iconos/ejemploWhile.png" alt="">
+                <h4>Video de referencia</h4>
+                <iframe src="https://www.youtube.com/watch?v=-kFBwApYVtA&ab_channel=Programaci%C3%B3nATS" frameborder="0"></iframe>
+            </article>
+
+            <article id="forbreakcontinue">
+                <h2 class="subtitulos" style=" width: 550px;">FOR con el uso de break y continue</h2>
+                <p>El <span style="font-weight: bold;text-decoration: underline;">break</span> se utiliza para salir de un bucle prematuramente mientras que el <span style="font-weight: bold;text-decoration: underline;">continue</span> se utiliza para saltar el resto del código en el cuerpo del bucle y pasar a la siguiente iteración.</p>
+                <h4>Su estructura basica es la siguiente</h4>
+                <img src="/iconos/estructuraForbreak.png" alt="">
+                <h4>Ejemplos de uso con break</h4>
+                <p>Tomemos un ejemplo, tendremos un parrafo y buscaremos una palabra específica en él, cuando la encuentre se detendra la búsqueda. Acontinuacion se puede observar
+                   la resolucion del ejemplo dado.</p>
+                <img src="/iconos/ejemploForBreak.png" alt="">
+                <h4>Ejemplos de uso con continue</h4>
+                <p>Tomemos un ejemplo, tendremos una lista de correos la cual voy a revisar y omitire aquellos que no tienen un formato válido (no contienen '@') .Acontinuacion
+                    se puede observar la resolucion del ejemplo dado.</p>
+                <img src="/iconos/ejemploForContinue.png" alt="">
+                <h4>Video de referencia</h4>
+                <iframe src="https://www.youtube.com/watch?v=-kFBwApYVtA&ab_channel=Programaci%C3%B3nATS" frameborder="0"></iframe>
+            </article>
+
+            <article id="whilebreakcontinue">
+                <h2 class="subtitulos" style=" width: 550px;">WHILE con el uso de break y continue</h2>
+                <p>El <span style="font-weight: bold;text-decoration: underline;">break</span> se utiliza para salir de un bucle prematuramente mientras que el <span style="font-weight: bold;text-decoration: underline;">continue</span> se utiliza para saltar el resto del código en el cuerpo del bucle y pasar a la siguiente iteración.</p>
+                <h4>Su estructura basica es la siguiente</h4>
+                <img src="/iconos/estructuraWhilebreak.png" alt="">
+                <h4>Ejemplo de uso con con break</h4>
+                <p>Tomemos un ejemplo, en el que tendremos una lista de articulos y quiero encontrar un cierto articulo dentro de esa lista de compras y una vez que lo encuentre
+                   detener la búsqueda.Acontinuacion se puede observar la resolucion del ejemplo dado.</p>
+                <img src="/iconos/ejemploWhileBreak.png" alt="">
+                <h4>Ejemplo de uso con continue</h4>
+                <p>Tomemos un ejemplo, en el que registraremos las notas de los estuidiantes pero cuando se ingrese una nota negativa le diremos que es incorrecta pero el programa
+                   no se detiene sino que continua.Acontinuacion se puede observar la resolucion del ejemplo dado.</p>
+                <img src="/iconos/ejemploWhileContinue.png" alt="">
+                <h4>Video de referencia</h4>
+                <iframe src="https://www.youtube.com/watch?v=-kFBwApYVtA&ab_channel=Programaci%C3%B3nATS" frameborder="0"></iframe>
+            </article>
+        </div>
+       </section>
+    <footer id="pie">
+        <p>Redes sociales de la pagina</p>
+    </footer>
+
+    <script src="proyecto.js"></script>
+    <!--Script de bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

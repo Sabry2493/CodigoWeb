@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Mandali&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Patua+One&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Patua One", serif;
+}
+
+#miNav{
+    border-radius: 2px;
+    font-family: "Mandali", sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    background: linear-gradient(to right,#f7f6f5,rgb(224, 163, 77),rgb(226, 150, 44),#ce6f02,#c53902);
+    padding: 0px 15px;    
+}
+
+.nav-link{
+    color: black;  
+
+}
+.nav-link:hover{
+    background-color: #ebb55136;
+    color: black;
+    border-radius: 5px;
+    width: 160px;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.dropdown-item{
+    color: black;
+    font-weight: bold;
+}
+.dropdown-item:hover{
+    background-color: #ebb55136;
+    color: black;
+    width: 100%;
+    font-size: 23px;
+    font-weight: bold;
+    
+    
+}
+.iconos{
+    height: 35px;
+    padding: 0px 10px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    font-family: "Mandali", sans-serif;
+    font-weight: bold;
+    padding: 10px 15px;
+
+}
+
+#logoCodweb:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+/*ESTILOS DE NOSOTROS*/
+#nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(to left, rgb(224, 146, 1), #ce6f02, #c53902);
+    background: linear-gradient(to top, rgb(240, 238, 235), #cfcfce, #d6d5d5);
+    height: auto; /* Ajuste la altura automática para contenido dinámico */
+}
+
+
+#tituloNosotros {
+    padding-bottom: 60px;   
+    width: 100%;
+}
+
+#presentacion {
+    width: 100%;
+}
+
+#presentacion img {
+    padding-bottom: 40px;
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+  
+/* Media query : 
+Cuando quiera aplicar estilos específicos que se limiten a ciertos tamaños de pantalla, como móviles o tabletas,
+es recomendable utilizar media queries en CSS. Esto te permite definir estilos que se apliquen solo cuando se cumplan
+ciertas condiciones de tamaño de pantalla, como el ancho máximo (max-width) o el mínimo (min-width).*/
+
+/*Para dispositivos móviles*/
+@media (max-width: 768px) {
+    #miOffcanvas {
+        /*max-height: 45vh;  Altura máxima del offcanvas, ajustable según tu diseño */
+        overflow-y: auto; /* Añade scroll si el contenido excede la altura máxima */
+        border-radius: 0px 0px 20px 0px;
+        max-width: 40vh;
+        /*background utiliza linear-gradient para crear el degradado
+        Ajusta los colores y la dirección (to top, to bottom, to left, to right, etc.) */
+        background: linear-gradient(to top,#f7f6f5,rgb(224, 163, 77),rgb(226, 150, 44),#ce6f02,#c53902);/* De abajo hacia arriba, colores de ejemplo */
+        
+    }
+    #logoCodweb{
+        height: 90px;
+    }
+}
+
+/*Para relojes inteligente*/
+@media (max-width: 360px) {
+    /* Estilos específicos para dispositivos con pantallas de reloj inteligente */
+    #miOffcanvas {
+        /*max-height: 45vh;  Altura máxima del offcanvas, ajustable según tu diseño */
+        overflow-y: auto; /* Añade scroll si el contenido excede la altura máxima */
+        border-radius: 0px 0px 20px 0px;
+        max-width: 40vh;
+        /*background utiliza linear-gradient para crear el degradado
+        Ajusta los colores y la dirección (to top, to bottom, to left, to right, etc.) */
+        background: linear-gradient(to top,#f7f6f5,rgb(224, 163, 77),rgb(226, 150, 44),#ce6f02,#c53902);/* De abajo hacia arriba, colores de ejemplo */
+        font-size: 12px;
+    }
+    #offcanvasNavbarLabel{
+        font-size: 12px;
+    }
+    #logoOffc{
+        height: 20px;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de control: if</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #a03207, #ee7724, #d8363a);
+            background: linear-gradient(to left,rgb(224, 146, 1),#ce6f02,#c53902);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 50%;
+            height: auto;
+        }
+        .text-section {
+            margin-bottom: 20px;
+        }
+        .text-section h3 {
+            color: #333;
+        }
+        .text-section p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .code-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+        .code-container pre {
+            counter-reset: line;
+        }
+        .code-container code {
+            display: block;
+            white-space: pre;
+        }
+        .code-container code:before {
+            counter-increment: line;
+            content: counter(line);
+            display: inline-block;
+            width: 2em;
+            margin-right: 1em;
+            background: #ddd;
+            text-align: right;
+            padding-right: 0.5em;
+            border-right: 1px solid #bbb;
+        }
+        .video-container {
+            text-align: center;
+        }
+        .video-container iframe {
+            max-width: 100%;
+            height: auto;
+        }
+      
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="/index.html">
+                <img src="/iconos/logo.png" alt="Logo">
+            </a>
+            <h1>Estructura de control: for</h1>
+        </div>
+        <div></div> 
+    </header>
+    <div class="content">
+        <div class="image-container">
+            <img src="/iconos/java1.png" alt="java">
+        </div>
+        <div class="text-section">
+            <h3>¿Cómo funciona un Ciclo For?</h3>
+            <p>Para comprender mejor el funcionamiento del ciclo for, solucionemos un pequeño ejercicio práctico, supongamos que queremos mostrar los números pares (múltiplos de dos :P) entre el 500 y el 1000. Con esta información inmediatamente podemos determinar que por medio de un ciclo debemos mostrar una serie de números como la siguiente: 500 502 504 506 ... 600 ... 852 ... 906 ... 980 .. 1000. Tenemos entonces todo lo necesario para nuestro ciclo. Tenemos un valor inicial que sería el 500, un valor final (1000) y tenemos un tamaño de paso que es 2 (los números pares). Estamos ahora en capacidad de determinar los componentes esenciales para un ciclo for.<br>
+
+
+                <br><b>Vamos a ver ahora la sintaxis de un ciclo for en Java</b>
+                <br>Así estaremos listos para usarlos en nuestros programas de ahora en adelante.
+                del Ciclo For en Java:
+               <br>La sintaxis de un ciclo for es simple en Java, en realidad en la mayoría de los lenguajes de alto nivel es incluso muy similar, de hecho, con tan solo tener bien claros los 3 componentes del ciclo for (inicio, final y tamaño de paso) tenemos prácticamente todo hecho</p>
+        </div>
+        <div class="container">
+            <pre><code>
+                for(int i = valor inicial; i <= valor final; i = i + paso)
+                {
+                        ....
+                        ....
+                    Bloque de Instrucciones....
+                        ....
+                        ....
+                }
+            </code></pre>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/tTuU6ggMCtw" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

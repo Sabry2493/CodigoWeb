@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/indexEstilos.css">
+    <title>CodigoWeb Home</title>
+</head>
+
+<body>
+    <!--NAV RESPONSIVO-->
+
+    <!--Menu para mi pagina CodigoWeb-->
+    <!--Para que el nav este dentro de una tarjeta uso la clase card-->
+    <div class="card" style="background: linear-gradient(to bottom,rgb(247, 232, 232),rgb(189, 131, 50),#c76c05,#c53902);">
+        <div class="card-body py-2">
+            <!--Navbar-expand-lg:navbar se expandirá en dispositivos grandes (lg).-->
+            <nav class="navbar navbar-expand-lg py-1" id="miNav">
+                <!--En esta seccion agrego el logo-->
+                <a href="/index.html" class="navbar-brand ps-2"><img src="/iconos/logo_Codigoweb.png" alt=""
+                        height="95px" id="logoCodweb"></a>
+                <!--menu hamburguesa: clase navbar-toggler, los atributos data-bs-toggle(al apretar el boton con la clase
+                        navbar-toggler se activa el offcanvas y data-bs-target:cual offcanvas activara id miOffcanvas. 
+                        -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#miOffcanvas"
+                    aria-controls="miOffcanvas">
+                    <!--Para el icono hamburguesa uso la clase navbar-toggler-icon dentro de una span-->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--menu desplegable del lado izquierdo, un div con clases offcanvas(tipo offcanvas) y offcanvas-start(a la izq=start o derec=end)
+                    Dentro del contenedor tengo 2 partes(2divs):header y el body de este menu.
+                -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="miOffcanvas"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a href="/index.html" class="me-2"><img src="/iconos/logoCodigoweb.png" alt="logo" height="90px"
+                                id="logoOffc" width="100%"></a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end  flex-grow-1 pe-3">
+                            <!--Los items de la lista deben usar la clase nav-item-->
+                            <li class="nav-item pe-4">
+                                <!--los enlaces de los items deben usar la clase: nav-link-->
+                                <a class="nav-link" href="/index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown pe-4">
+                                <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Lenguajes</button>
+                                <ul class="dropdown-menu"
+                                    style="background: linear-gradient(to top,rgba(247, 232, 232, 0.527),rgba(189, 131, 50, 0.589),#c76c0598,#c539029d); border: solid 0px;">
+                                    <li><a class="dropdown-item" href="/python.html">Python</a></li>
+                                    <li><a class="dropdown-item" href="#">Java</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item pe-4">
+                                <a class="nav-link" href="#nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item pe-4">
+                                <a class="nav-link" href="#contactenos">Contactanos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <section id="intro">
+        <div class="row">
+            <h2>Nuestra pagina</h2>
+            <p>Contar sobre la pagina, porque elegirnos y porque esta pagina es la que te ayudara a rendir exitosamente
+            algo parecido a estos hacer....</p>
+            <a href="https://es.khanacademy.org/">enlace1</a>
+            <a href="https://www.codeavengers.com/">enlace 2</a>
+            <a href="https://br.codecombat.com/">enlace3</a>
+        </div>
+
+    </section>
+
+                                                <!--NOSOTROS-->
+
+    
+    <section id="nosotros">
+        <h2 style="font-size: 50px;text-align: center;margin-bottom: 50px;">Sobre Nosotros</h2>
+        <div class="row" id="presentacion">
+            <div id="yo" class="col-md-6">
+                <img src="/iconos/personaf.jpg" alt="Foto de Sabrina Tolay" class="img-fluid rounded">
+                <h3>Sabrina Tolay</h3>
+                <p class="text-left mt-2">Especialista en Python y desarrollo web</p>
+                <p >Estudiante de la Tecnicatura Universitaria en Web en la Universidad Nacional de San Luis, Argentina.
+                </p>
+            </div>
+            <div id="compañero" class="col-md-6">
+                <img src="/iconos/personam.jpg" alt="Foto de Alfredo Galvan" class="img-fluid rounded">
+                <h3>Alfredo Galvan</h3>
+                <p class="text-left mt-2">Experto en Java y algoritmos</p>
+                <p>Estudiante de la Tecnicatura Universitaria en Web en la Universidad Nacional de San Luis, Argentina.
+                </p>
+            </div>
+        </div>
+            
+        <p class="mt-4">Somos Alfredo y Sabrina, dos apasionados estudiantes de programación que, a lo largo de nuestra carrera,
+            nos encontramos con numerosos desafíos y preguntas. Sabemos lo abrumador que puede ser aprender a
+            programar y dominar diferentes lenguajes, y por eso decidimos crear esta página.</p>
+        <p>En <strong>CodigoWeb</strong>, nuestra misión es ayudar a otros estudiantes y entusiastas de la
+            programación a superar las mismas dificultades que nosotros enfrentamos. Queremos ser una fuente
+            confiable de información, tutoriales y recursos que faciliten tu aprendizaje y te permitan avanzar en tu
+            carrera de programación.</p>
+        <p>En nuestro sitio, encontrarás guías detalladas, ejemplos prácticos y respuestas a las preguntas más
+           comunes sobre los lenguajes de programación que hemos estudiado. Creemos que compartiendo nuestros
+           conocimientos y experiencias, podemos contribuir a la comunidad de programadores y hacer que el camino
+           hacia el dominio de la programación sea un poco más fácil para todos.</p>
+        <p>Gracias por visitar <strong>CodigoWeb</strong>. ¡Esperamos que encuentres útil nuestro contenido y que te
+           ayude a alcanzar tus objetivos en el mundo de la programación!</p>
+    </section>
+     
+
+
+    <!--FORMULARIO-->
+    <div class="container-fluid" id="contactenos">
+        <section class="h-100 gradient-form" style="background-color: rgba(76, 76, 80, 0.801);">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-11">
+                        <div class="card rounded-3 text-black btn-login">
+                            <div class="row g-0">
+                                <div class="col-lg-6">
+                                    <div class="card-body p-md-5 mx-md-4">
+                                        <div class="text-center">
+                                            <img src="/iconos/logo.png" style="width:20%;" alt="logo">
+                                            <h4 class="mt-1 mb-5 pb-1">CodigoWeb</h4>
+                                        </div>
+    
+                                        <form id="formularioContacto">
+                                            <p>Contactenos para mas ayuda</p>
+    
+                                            <div class="form-outline mb-4">
+                                                <label class="form-label" for="nom">Nombre</label>
+                                                <input type="text" id="nom" class="form-control" placeholder="su nombre" />
+                                            </div>
+    
+                                            <div class="form-outline mb-4">
+                                                <label class="form-label" for="ape">Apellido</label>
+                                                <input type="text" id="ape" class="form-control" placeholder="su apellido" />
+                                            </div>
+    
+                                            <div class="form-outline mb-4">
+                                                <label class="form-label" for="email">Email de contacto</label>
+                                                <input type="email" id="email" class="form-control" placeholder="su dirección de correo" />
+                                            </div>
+    
+                                            <div class="form-outline mb-4">
+                                                <label class="form-label" for="tel">Telefono</label>
+                                                <input type="number" id="tel" class="form-control" placeholder="su numero" />
+                                            </div>
+    
+                                            <div class="form-outline mb-4">
+                                                <label class="form-label" for="textArea">Comente su interes</label>
+                                                <textarea id="textArea" class="form-control" placeholder="Escriba aqui" rows="5"></textarea>
+                                            </div>
+    
+                                            <div class="text-center pt-1 mb-2 pb-1">
+                                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btn-login" type="button" onclick="Valida()">Enviar</button>
+                                            </div>
+                                        </form>
+                                        <div id="Error"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-items-center gradient-custom-2 btn-login" style="background: linear-gradient(to right,#d68c1d,#c53902);">
+                                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                        <h4 class="mb-3" style="font-size: 28px;">Te ayudaremos a comprender el mundo de la programacion</h4>
+                                        <p class="small mb-0" style="font-size: 17px;">Si necesitas obtener clases personalizadas o mas detalles sobre un tema, no te dejes estar y no dudes en comunicarte con nosotros. <br>Clases en persona o via web</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--MODAL PARA FORMULARIO-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: rgba(238, 170, 69, 0.884);">
+                <div class="modal-header"  style="border-bottom: none;">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Envio Exitoso</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cruz"></button>
+                </div>
+                <div class="modal-body">
+                    Hemos recibido su consulta.Gracias por comunicarse con nosotros,pronto nos pondremos en contacto con usted
+                </div>
+                <div class="modal-footer" style="border-top: none;">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: rgba(90, 90, 90, 0.842);">Comprendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <div class="card">
+        <div class="card-body py-1 pe-1 ps-1" style="background: linear-gradient(to bottom,rgb(247, 232, 232),rgb(189, 131, 50),#c76c05,#c53902);">
+            <footer style="background: linear-gradient(to left,rgb(245, 223, 193),#c76c05,#c53902);border-radius: 2px;">
+
+                <p>Visita nuestras redes</p>
+                <div>
+                    <a href=""><img src="/iconos/face.png" alt="" class="iconos"></a>
+                    <a href=""><img src="/iconos/insta.png" alt="" class="iconos"></a>
+                    <a href=""><img src="/iconos/youtu.png" alt="" class="iconos"></a>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <script src="proyecto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

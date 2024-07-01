@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Patua+One&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Patua One", serif;
+    
+}
+
+/*ESTILOS DEL MENU #f74712,#ee7724*/
+#cabecera{
+    display: flex;
+    /*background: linear-gradient(to right,#ee7724, #e24e21);*/
+    background: linear-gradient(to right,#f7f6f5,rgb(224, 163, 77),rgb(226, 150, 44),#ce6f02,#c53902);
+    align-items: center;
+    justify-content: space-between; 
+    padding-left: 20px;
+    margin: 0px;
+    border: solid 15px #e7650d;
+}
+
+#logo{
+    width: 65px;
+    height: auto;
+    animation: rotate 3s infinite linear; /* Añadir esta línea */
+   
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#titulo{
+    text-shadow:2px 5px 10px  rgb(76, 76, 80);
+}
+
+
+#navegacion{
+    text-align: center;
+    margin: 0px;
+    padding: 0px; 
+    padding-top: 16px;
+
+    text-shadow:0px 2px 15px rgba(255, 255, 255, 0.959);
+    
+}
+
+.row a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+.row ul{
+    list-style: none;
+    margin-right: 0px;
+    padding: 20px;
+    padding-right: 0px;
+    background: linear-gradient(to right,rgb(226, 150, 44),#ce6f02,#c53902);
+    border-radius: 5px 0px 0px 5px;
+}
+
+#lenguajes{
+    display:none ;/*que desaparezcan cuando no se pasa por encima*/
+    position: absolute;/*si no se pone el menu se ensancharia cada vez que habre el submenu*/
+    min-width: 140px;/*ancho minimo*/
+}
+
+
+/*ESTILOS DEL CARRUSEL*/
+#carrusel{
+    background-color: rgba(76, 76, 80, 0.801);
+    margin: 0px 10px;
+    padding: 40px ;
+    height: 100% ; /* Altura completa de la ventana */
+}
+
+#carrusel img{
+    height: 445px;
+    width:auto;
+    border: solid 6px #e7650d;
+    box-shadow:5px 5px 12px rgba(255, 255, 255, 0.959); 
+}
+
+/*ESTILOS DE NOSOTROS*/
+#nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(to left, rgb(224, 146, 1), #ce6f02, #c53902);
+    background: linear-gradient(to top, rgb(240, 238, 235), #cfcfce, #d6d5d5);
+    height: auto; /* Ajuste la altura automática para contenido dinámico */
+}
+
+
+#tituloNosotros {
+    padding-bottom: 60px;   
+    width: 100%;
+}
+
+#presentacion {
+    width: 100%;
+}
+
+#presentacion img {
+    padding-bottom: 40px;
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+/*ESTILOS DE CONTACTENOS*/
+
+
+/*ESTILOS DE FOOTER*/
+#pie{
+    background: linear-gradient(to left,rgb(224, 146, 1),#ce6f02,#c53902);
+    margin-bottom: 0px;
+    height: 100%;
+    padding: 12px;
+}
+    
+
+                                                /* MEDIA QUERIES */
+@media (max-width: 768px) {
+    #titulo {
+        font-size: 1.2rem;
+        padding-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #navegacion ul {
+        padding-left: 0;
+    }
+
+    #navegacion ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #modoOscuro {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    
+
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #titulo {
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    #logo {
+        max-width: 80px;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    #navegacion ul li {
+        font-size: 0.9rem;
+    }
+
+    #modoOscuro svg {
+        width: 20px;
+        height: 20px;
+    }
+}
